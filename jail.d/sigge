@@ -1,0 +1,9 @@
+[sigge]
+enable = false
+port = http,https
+filter = sigge
+action = iptables-multiport[name=sigge, port="http,https", protocol=tcp]
+logpath = /var/log/sigge/*acceso*log
+maxretry = 20
+findtime = 1500
+bantime = 7200
